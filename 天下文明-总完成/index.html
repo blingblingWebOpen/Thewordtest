@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">		
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 			
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Qiniu VOD player demo">
+		<meta name="format-detection" content="telephone=no">
+		<title>天下文明</title>
+		<link rel="stylesheet" href="../css/lqbase.css" />
+		<link rel="stylesheet" href="../css/lqpublic.css" />
+		<link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+		<script src="../js/jquery-1.10.1.min.js"></script>
+		<script src="../js/swiper-3.4.2.jquery.min.js"></script>
+
+	</head>
+	<body class="paddbottom backgry">
+			<!--banner轮播图-->
+		<div class="bannerdiv bannerdiv2">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="../image/icolq11.png"></div>
+			        <div class="swiper-slide"><img src="../image/icolq12.png"></div>
+			        <div class="swiper-slide"><img src="../image/icolq13.png"></div>
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>			    
+			</div>
+		</div>
+		<script type="text/javascript">
+  var mySwiper = new Swiper ('.swiper-container', {
+  	initialSlide:0,//默认从第一张图开始
+  	autoplay: 5000,//可选选项，自动滑动
+  	speed:300,
+  	autoplayDisableOnInteraction:false,
+    direction: 'horizontal',//滑动方向水平    
+    loop: true,        
+    pagination: '.swiper-pagination',   // // 如果需要分页器
+  }) 
+
+</script>
+		<!--banner轮播图end-->
+		
+		<!-- 砍价 -->
+		<div class="programPurchase">
+			<div class="programTop">
+				<div class="program">
+					<p class="programTitle">《天下文明——人文春天下文明》&nbsp;&nbsp;<i>第一季</i></p>
+					<div class="programPic">
+						<b>￥50.00</b>
+					</div>
+					
+				</div>
+				
+			</div>
+			<div class="programBottom">
+				<p>中国有着辽阔的疆域和悠久的历史。在数千年的栖息劳作、繁衍生息中，这里的人们一代又一代学习着与大自然沟通相处的方法。并用节日的形式把这些方法一一记录下来，传承至今。</p>
+			</div>
+			<div class="programbtn">
+				<a class="redgBtn" href="#">购&nbsp;&nbsp;&nbsp;&nbsp;买</a>
+				<a class="redgBtn kjbtn" href="#"></a>
+			</div>
+		</div>
+		<!-- 砍价end -->
+		
+		<!-- 幸运大抽奖 删除-->
+		<!-- <div class="draw">
+			<img src="../image/icolq14.png">
+			<a class="redBtn">点击查看我的奖品</a>
+		</div> -->
+		<!-- 幸运大抽奖end -->
+		
+		<!-- 播放列表 -->
+		<div class="playercenter">
+		<!-- 循环 -->
+			<div class="playerlist">
+				<a href="../天下文明-wacth/vediopay.html">
+				<div class="playerimg">
+					<img class="players" src="../image/icolq07.png"/>
+					<span class="playertime">直播时间:2017年2月18号</span>
+				</div>
+				<div class="playertitle">
+					<span>人文春节系列————过个文化节</span>
+					<strong>观看人数:1.2万</strong>
+				</div>
+				</a>
+			</div>
+			<div class="playerlist">
+				<a href="../天下文明-wacth/vediopay.html">
+				<div class="playerimg">
+					<img class="players" src="../image/icolq07.png"/>
+					<span class="playertime">直播时间:2017年2月18号</span>
+				</div>
+				<div class="playertitle">
+					<span>人文春节系列————过个文化节</span>
+					<strong>观看人数:1.2万</strong>
+				</div>
+				</a>
+			</div>
+			<div class="playerlist">
+				<a href="../天下文明-wacth/vediopay.html">
+				<div class="playerimg">
+					<img class="players" src="../image/icolq07.png"/>
+					<span class="playertime">直播时间:2017年2月18号</span>
+				</div>
+				<div class="playertitle">
+					<span>人文春节系列————过个文化节</span>
+					<strong>观看人数:1.2万</strong>
+				</div>
+				</a>
+			</div>
+			<!-- 循环end -->
+		</div>
+		<!-- 播放列表end -->
+
+		
+		
+		
+		<div id="footernav">
+			<a class="jinc onthis" href="index.html">
+				<img src="../image/navbottom1-1.png" width="22" height="22"/>
+				<span class="red">首页</span>
+			</a>
+			<a class="jinc" href="dingdanyichuli.html">
+				<img src="../image/navbottom2.png" width="22" height="22"/>
+				<span>订阅</span>
+			</a>
+			<a class="jinc" href="store.html">
+				<img src="../image/navbottom3.png" width="22" height="22"/>
+				<span>发现</span>
+			</a>
+			<a class="jinc" href="setthis.html">
+				<img src="../image/navbottom4.png" width="22" height="22"/>
+				<span>我的</span>
+			</a>
+		</div>
+		<script type="text/javascript">
+		window.onload=function(){
+				$(".jinc").click(function(){
+					$(this).addClass('onthis').siblings('a').removeClass('onthis');					
+				})
+			}
+		</script>
+		
+	</body>
+</html>

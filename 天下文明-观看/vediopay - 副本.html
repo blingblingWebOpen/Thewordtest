@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 			
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Qiniu VOD player demo">
+		<title>天下文明</title>
+		<link rel="stylesheet" href="../css/lqbase.css" />
+		<link rel="stylesheet" href="../css/lqpublic.css" />
+		<link href="https://player.qiniucc.com/sdk/latest/qiniuplayer.min.css" rel="stylesheet">
+		<script src="https://player.qiniucc.com/sdk/latest/qiniuplayer.min.js"></script>
+		<script src="../js/jquery-1.11.0.min.js"></script>
+	
+		<!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+         <script type="text/javascript">
+			window.onload=function(){
+
+				// 切换tab
+				$(".videodenav ul li").click(function(){
+					$(this).addClass('selected').siblings('li').removeClass('selected');
+					$(this).children('.videode01').css("display","flex");
+					$(this).siblings('li').children('.videode01').css("display","none");
+					// isPjTab();
+				});
+				
+				// 追加评论
+				var oclick = $('.pinjiadiv');
+       			var onull = $('.nopinl');
+       			var odiv = $('.pinjdiv');
+       			var newpin = '<div class="videoplist"><div class="userpic"><img  src="image/icopic01.png"/></div><div class="pdiv"><p class="pdivname">新恨水长东</p><p class="pdivcenter">还是老师讲的偏僻如理</p><div class="pdivcaoz"><span class="pdivtime">1小时</span><div class="pdivzan"><em class="zannum">0</em><i></i></div></div></div></div>';
+       			for (var i = 0; i < oclick.length; i++) {
+       				oclick[i].onclick =function(){
+       					onull.css('display','none');
+       					odiv.prepend(newpin);       				
+       				}
+       			
+       				}	
+       			}
+			
+		</script>
+<!-- <style>
+    *{
+        margin: 0;
+        padding:0;
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+        -webkit-text-size-adjust:none;
+    }
+    html{
+        font-size:10px;
+    }
+    body{
+        background-color: #f5f5f5;
+        font-size: 1.2em;
+    }
+
+    .opacity{
+        -webkit-animation: opacity 0.3s linear;
+        animation: opacity 0.3s linear;
+    }
+    @-webkit-keyframes opacity {
+        0% {
+            opacity:0;
+        }
+        100% {
+            opacity:1;
+        }
+    }
+    @keyframes opacity {
+        0% {
+            opacity:0;
+        }
+        100% {
+            opacity:1;
+        }
+    }
+    </style> -->
+    <link rel="stylesheet" href="../css/dropload.css">
+	</head>
+	<body class="paddbottom">
+	<div id="div">已赞</div>
+		<div id="div2">取消赞</div>
+		<div id="divloading"></div>
+	<!-- 弹窗，请输入观看密码 -->
+		<div class="zhezhaoc2"></div>
+		<div class="mimawatch">
+			<h4>请输入您的观看密码</h4>
+			<input class="mimainp" type="text" name="">
+			<p class="mimabtns"><a class="sure">确&nbsp;&nbsp;&nbsp;定</a><a class="nosure">取&nbsp;&nbsp;&nbsp;消</a></p>
+		</div>
+	<!-- 弹窗，请输入观看密码end -->
+		<!--播放div-->
+		<div class="bannerdiv videoplay">
+			 <!-- <video id="demo-video" class="video-js vjs-big-play-centered"></video> -->
+
+        <script src="http://player.qiniucc.com/sdk/latest/qiniuplayer.min.js?v=0.3.3"></script>
+        <script>
+            var url = 'http://og9dz2jqu.cvoda.com/Zmlyc3R2b2RiOldlYiBEZXZlbG9wbWVudCBJbiAyMDE3IC0gQSBQcmFjdGljYWwgR3VpZGUtOWhES2ZCS3VYakkubWt2_q00000001.m3u8';
+            new QiniuPlayer('demo-video', {
+                engineOrder : ['html5', 'flash'],
+                autoplay    : false,
+                preload     : 'auto',
+                controls    : true,
+                poster      : 'https://player.qiniucc.com/qiniu-620x205.png',
+                url        : url,
+                type        : "hls",
+              	width	: "100%",
+              	height	:178
+            });
+        </script>
+		</div>
+		<!--播放divend-->
+		
+
+		<!-- 视频标题 -->
+		<div class="videodiv">
+			<h2 class="videotitle">人文春节系列————过个文化节</h2>
+			<div class="videodenav">
+				<ul>
+					<li class="selected"><a class="ali">交流</a>
+					<div class="videode01" style="display: flex;">
+						<div class="videode03 contentpinj">
+						<div class="pinjdiv">
+					<!-- 交流循环 -->
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan pdivzaned"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan pdivzaned"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan pdivzaned"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						</div>
+						<!-- end -->
+						<!-- 我也说两句 -->
+						<div class="pinjiadiv">
+							<input type="text" name="mysay" placeholder="我也说两句">
+						</div>
+					</div>
+					
+					</div>
+					</li>
+					<li ><a class="ali">问答抽奖</a>
+						<div class="videode01" style="display: none;">
+					<div class="videode02">
+						<p class="tips01">
+							请务必正确填写通讯地址，便于为您发送礼品
+						</p>
+						<div class="wenda1">
+							<label class="videolab" >姓名&nbsp;:</label>
+							<input class="videoinp" type="text" name="name" value="">
+							<label class="videolab" >联系方式&nbsp;(&nbsp;电话&nbsp;)&nbsp;:</label>
+							<input class="videoinp" type="text" name="phone" value="">
+							<label class="videolab" >邮寄地址&nbsp;:</label>
+							<input class="videoinp" type="text" name="adress" value="">
+						<!-- 提交 -->		
+						<a class="redsubmitbtn">提&nbsp;&nbsp;&nbsp;&nbsp;交</a>
+						<!-- 提交end -->
+						</div>
+						<div class="wenda2">
+							<label class="videolab" >钱老师介绍的青瓷，大家说说有那几个品类&nbsp;:</label>
+							<input class="videoinp" type="text" name="wen1" value="" placeholder="点击回答">
+							<label class="videolab" >青瓷的产地有哪几个地方呢&nbsp;:</label>
+							<input class="videoinp" type="text" name="wen2" value="" placeholder="点击回答">
+							<label class="videolab" >我国的五大官窑&nbsp;:</label>
+							<input class="videoinp" type="text" name="wen3" value="" placeholder="点击回答">
+							<!-- 提交 -->		
+							<a class="redsubmitbtn">提&nbsp;&nbsp;&nbsp;&nbsp;交</a>				
+							<!-- 提交end -->
+							<!-- 提交 -->		
+							<div class="redsubmitbtn2">
+							<div class="submitsuccess"><i class="icosuccess"></i><span>提交成功</span></div>
+							<a class="wendadetails">
+								跳转查看详情
+							</a>
+							</div>				
+							<!-- 提交end -->
+						</div>
+						
+					</div>
+
+					
+				</div>
+					</li>
+					<li ><a class="ali">直播简介</a>
+						<div class="videode01">
+
+							<div class="videode03 read">
+				<h2 class="read-title">第一章简介</h2>
+				<img class="Limg" src="../image/2.png" />
+				<p class="read-p">听力课堂是国内很受欢迎的开放式英语学习网站,提供海量英语听力mp3下载(在线学习和免费下载),以及各种免费学英语资料,让您迅速提升英语水平,攻克英语学习难关!听力课堂是国内很受欢迎的开放式英语学习网站,提供海量英语听力mp3下载(在线学习和免费下载),以及各种免费学英语资料,让您迅速提升英语水平,攻克英语学习难关!听力课堂是国内很受欢迎的开放式英语学习网站,提供海量英语听力mp3下载(在线学习和免费下载),以及各种免费学英语资料,让您迅速提升英语水平,攻克英语学习难关!</p>
+				<img class="Limg" src="../image/2.png" />
+				<p class="read-p">听力课堂是国内很受欢迎的开放式英语学习网站,提供海量英语听力mp3下载(在线学习和免费下载),以及各种免费学英语资料,让您迅速提升英语水平,攻克英语学习难关!听力课堂是国内很受欢迎的开放式</p>
+				<p class="read-p">听力课堂是国内很受欢迎的开放式英语学习网站,提供海量英语听力mp3下载(在线学习和免费下载),以及各种免费学英语资料,让您迅速提升英语水平,攻克英语学习难关!听力课堂是国内很受欢迎的开放式</p>
+			</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- 视频有关内容 -->
+			<div class="videode">
+			<!-- 交流 -->
+				<div class="videode01" style="display: block;">
+						
+				</div>
+			<!-- 问答抽奖 -->
+				
+			<!-- 直播简介 -->
+				<div class="videode01" style="display: none;">
+				
+				</div>
+			</div>
+
+			<!-- 视频有关内容end -->
+
+		</div>
+		<!-- 视频标题end -->
+
+<!-- jQuery1.7以上 或者 Zepto 二选一，不要同时都引用 -->
+<!-- <script src="js/zepto.min.js"></script> -->
+<script src="../js/dropload.min.js"></script>	
+<script src="../js/lqjs.js"></script>	
+<script>
+$(function(){
+    // 页数
+    var page = 0;
+    // 每页展示5个
+    var size = 5;
+
+    // dropload
+    $('.contentpinj').dropload({
+        scrollArea : window,
+        loadDownFn : function(me){
+            page++;
+            // 拼接HTML
+            var result = '';
+            $.ajax({
+                type: 'GET',
+                url: 'http://ons.me/tools/dropload/json.php?page='+page+'&size='+size,
+                dataType: 'json',
+                success: function(data){
+                    var arrLen = data.length;
+                    if(arrLen > 0){
+                        for(var i=0; i<arrLen; i++){
+                            // result +=   '<a class="item opacity" href="'+data[i].link+'">'
+                            //                 +'<img src="'+data[i].pic+'" alt="">'
+                            //                 +'<h3>'+data[i].title+'</h3>'
+                            //                 +'<span class="date">'+data[i].date+'</span>'
+                            //             +'</a>';
+                            result += '<div class="videoplist"><div class="userpic"><img  src="image/icopic01.png"/></div><div class="pdiv"><p class="pdivname">2222恨水长东</p><p class="pdivcenter">还是老师讲的偏僻如理</p><div class="pdivcaoz"><span class="pdivtime">1小时</span><div class="pdivzan"><em class="zannum">0</em><i></i></div></div></div></div>';
+                                        
+                        }
+                    // 如果没有数据
+                    }else{
+                        // 锁定
+                        me.lock();
+                        // 无数据
+                        me.noData();
+                    }
+                    // 为了测试，延迟1秒加载
+                    setTimeout(function(){
+                        // 插入数据到页面，放到最后面
+                        // $('.lists').append(result);
+                         $('.pinjdiv').append(result);
+                        // 每次数据插入，必须重置
+                        me.resetload();
+                    },1000);
+                },
+                error: function(xhr, type){
+                    alert('Ajax error!');
+                    // 即使加载出错，也得重置
+                    me.resetload();
+                }
+            });
+        }
+    });   
+});
+</script>
+	
+	</body>
+</html>

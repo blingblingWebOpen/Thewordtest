@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 			
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Qiniu VOD player demo">
+		<meta name="format-detection" content="telephone=no">
+		<title>天下文明</title>
+		<link rel="stylesheet" href="../css/lqbase.css" />
+		<link rel="stylesheet" href="../css/lqpublic.css" />
+		<script src="../js/jquery-1.11.0.min.js"></script>
+
+	</head>
+	<body class="backgry">
+		<div class="buydiv">
+			<p class="buyp"><label>联系人&nbsp;:</label><input class="userinput" type="text" name="" value="" placeholder="请填写联系人姓名"></p>
+			<p class="buyp"><label>手机号&nbsp;:</label><input class="userinput" type="text" name="" value="" placeholder=""></p>
+		</div>
+		<div class="share-center buycenter">
+			<img class="share-center-img" src="../image/icolq10.png" />
+			<div class="share-center-text">
+				<h2 class="share-center-title">天下文明过个天下文明天下文明过个天下文明过个天下文明过个</h2>
+				<span class="share-center-tips">友朋会名家讲坛天下文明系列第一季</span>
+				<strong class="share-center-num">团购&nbsp;&nbsp;&nbsp;&nbsp;￥50.0</strong>
+			</div>
+		</div>
+		<div class="buynum">
+			<span>购买数量</span>
+			<div class="buyjis">
+			<i class="jian"></i>
+			<input class="buynuminp" type="text" name=""  readonly="readonly" value="1">
+			<i class="jia"></i>
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+			
+			$(document).ready(function(){
+				//加的效果
+				$('.jia').click(function(){	
+				var n=$(this).prev().val();
+				var num=parseInt(n)+1;
+				if(num==0){ return;}
+				$(this).prev().val(num);
+				});
+				//减的效果
+				$('.jian').click(function(){
+				var n=$(this).next().val();
+				var num=parseInt(n)-1;
+				if(num==0){ return}
+				$(this).next().val(num);
+				});
+			})
+			
+		</script>
+
+		<div class="buybtns">
+			<span class="buyprice">￥50.0</span>
+			<a class="redbtn" href="#">确定支付</a>
+		</div>
+		
+
+		
+		<!-- 弹窗，砍价成功 -->
+		<div class="zhezhaoc3"></div>
+		<div class="kanj">
+			<h4 class="ktitle">砍价成功</h4>
+			<p class="ktips">掌柜佩服阁下口才，让利:</p>
+			<span class="kprice">￥2.00</span>
+			<a class="redbtn surebtnk">确&nbsp;&nbsp;&nbsp;&nbsp;定</a>
+		</div>
+		
+	<script src="../js/lqjs.js"></script>
+	</body>
+</html>

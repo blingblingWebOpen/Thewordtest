@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 			
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Qiniu VOD player demo">
+		<meta name="format-detection" content="telephone=no">
+		<title>分类搜索</title>
+		<link rel="stylesheet" href="../css/lqbase.css" />
+		<link rel="stylesheet" href="../css/lqpublic.css" />
+		<script src="../js/jquery-1.11.0.min.js"></script>
+		<script src="../js/lqjs.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var allheight = document.body.scrollHeight;//屏幕高度
+				// 搜索空
+				var searchkey= allheight-34-36-50;//搜素下面的高度
+					$(".search-keywordcenter").css("height",searchkey+"px");
+
+				// 切换tab
+				$(".search-navli").click(function(){
+					$(this).addClass('keyed').siblings('li').removeClass('keyed');
+					$(this).children('.search-keywordcenter').css("display","flex");
+					$(this).siblings('li').children('.search-keywordcenter').css("display","none");
+				})
+				//专题
+				$(".search-keywordli span").click(function(){
+					
+					$('.search-keywordli span').addClass('reddiv').siblings('span').removeClass('reddiv');
+					$(this).addClass('reddiv').siblings('span').removeClass('reddiv');
+				})
+				// 搜索
+				$('.search-btn').click(function(){
+					$('.search-null02').css('display','flex');
+
+				})
+				$('.search-null-btn').click(function(){
+					$('.search-null02').css('display','none');
+					// $('.search-keywordli span').addClass('reddiv').siblings('span').removeClass('reddiv');
+				})
+
+			}
+		</script>
+	</head>
+	<body class="paddbottom grybg">
+	
+<!-- 弹窗，没有搜索内容 -->
+		<div class="search-null02">
+			<img class="search-null02-img" src="../image/icolq06.png">
+			<p class="search-null02-text">抱歉没有找到相关内容</p>
+			<a class="redbtn search-null-btn">确&nbsp;&nbsp;&nbsp;&nbsp;定</a>
+		</div>
+			<!-- 搜索框 -->
+		<div class="search-keywordf searchend">
+						<div class="search-inputsea">
+							<input class="search-inputs" type="text" name="" placeholder="关键字搜索">
+							<a class="search-btn">搜索</a>
+						</div>
+					</div>
+		<!-- 搜索框end -->
+		<!-- <div class="search-null search-xiug02">
+				<a class="search-keyworlda" href="#">中国文明</a>
+				<a class="search-keyworlda" href="#">世界文明</a>
+			</div> -->
+		<!-- 搜索导航 -->
+		<div class="search-nav">
+
+			<ul class="search-navul"><li class="search-navli keyed"><a class="search-keyword" href="#">看</a>
+				<div class="search-keywordcenter">
+					
+					<div class="search-keywordf">
+						<h6>专题1</h6>
+						<div class="search-keywordli">
+							<span class="">名家现场</span>
+							<span class="">听书</span>
+						</div>
+					</div>
+					<div class="search-keywordf">
+						<h6>名家</h6>
+						<div class="search-keywordli">
+							<span class="grydiv">许纪霖</span>
+							<span class="grydiv">赵林</span>
+							<span class="grydiv">鲍鹏山</span>
+							<span class="grydiv">骆玉民</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="search-navli"><a class="search-keyword" href="#">听</a>
+				<div class="search-keywordcenter"  style="display: none;">
+				
+					<div class="search-keywordf">
+						<h6>专题2</h6>
+						<div class="search-keywordli">
+							<span class="">名家现场</span>
+							<span class="">听书</span>
+						</div>
+					</div>
+					<div class="search-keywordf">
+						<h6>名家</h6>
+						<div class="search-keywordli">
+							<span class="grydiv">许纪霖</span>
+							<span class="grydiv">赵林</span>
+							<span class="grydiv">鲍鹏山</span>
+							<span class="grydiv">骆玉民</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="search-navli"><a class="search-keyword" href="#">读</a>
+				<div class="search-keywordcenter"  style="display: none;">				
+					<div class="search-keywordf">
+						<h6>专题3</h6>
+						<div class="search-keywordli">
+							<span class="">名家现场</span>
+							<span class="">听书</span>
+						</div>
+					</div>
+					<div class="search-keywordf">
+						<h6>名家</h6>
+						<div class="search-keywordli">
+							<span class="grydiv">许纪霖</span>
+							<span class="grydiv">赵林</span>
+							<span class="grydiv">鲍鹏山</span>
+							<span class="grydiv">骆玉民</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			</ul>
+			<!-- <ul><li class="search-navli"><a class="search-keyword" href="#">听</a></li></ul>
+			<ul><li class="search-navli"><a class="search-keyword" href="#">读</a></li></ul> -->
+			
+			
+		</div>
+		
+		<!-- 搜索导航end -->
+
+		
+		
+	
+
+		<div id="footernav">
+			<a class="jinc onthis" href="index.html">
+				<img src="../image/navbottom1-1.png" width="22" height="22"/>
+				<span class="red">首页</span>
+			</a>
+			<a class="jinc" href="dingdanyichuli.html">
+				<img src="../image/navbottom2.png" width="22" height="22"/>
+				<span>订阅</span>
+			</a>
+			<a class="jinc" href="store.html">
+				<img src="../image/navbottom3.png" width="22" height="22"/>
+				<span>发现</span>
+			</a>
+			<a class="jinc" href="setthis.html">
+				<img src="../image/navbottom4.png" width="22" height="22"/>
+				<span>我的</span>
+			</a>
+		</div>
+	</body>
+</html>

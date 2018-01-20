@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 			
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Qiniu VOD player demo">
+		<meta name="format-detection" content="telephone=no">
+		<title>友朋会</title>
+		<link rel="stylesheet" href="../css/lqbase.css" />
+		<link rel="stylesheet" href="../css/lqpublic.css" />
+		<script src="../js/jquery-1.11.0.min.js"></script>
+		<script src="../js/lqjs.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var allheight = document.body.scrollHeight;//屏幕高度
+				// 搜索空
+				var searchkey= allheight-34-36-50;//搜素下面的高度
+					$(".search-keywordcenter").css("height",searchkey+"px");
+
+				// 切换tab
+				$(".search-navli").click(function(){
+					$(this).addClass('keyed').siblings('li').removeClass('keyed');
+					$(this).children('.search-keywordcenter').css("display","flex");
+					$(this).siblings('li').children('.search-keywordcenter').css("display","none");
+				})
+				//专题
+				$(".search-keywordli span").click(function(){
+					
+					$('.search-keywordli span').addClass('reddiv').siblings('span').removeClass('reddiv');
+					$(this).addClass('reddiv').siblings('span').removeClass('reddiv');
+				})
+				// 搜索
+				$('.search-btn').click(function(){
+					$('.search-null02').css('display','flex');
+
+				})
+				$('.search-null-btn').click(function(){
+					$('.search-null02').css('display','none');
+					// $('.search-keywordli span').addClass('reddiv').siblings('span').removeClass('reddiv');
+				})
+
+			}
+		</script>
+	</head>
+	<body class="paddbottom">
+
+
+		<img class="ico404" src="../image/ico404.jpg">
+		
+	
+
+
+	</body>
+</html>

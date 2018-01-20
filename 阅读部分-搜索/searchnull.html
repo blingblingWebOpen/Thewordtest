@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 			
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Qiniu VOD player demo">
+		<meta name="format-detection" content="telephone=no">
+		<title>分类搜索</title>
+		<link rel="stylesheet" href="../css/lqbase.css" />
+		<link rel="stylesheet" href="../css/lqpublic.css" />
+		<script src="../js/jquery-1.11.0.min.js"></script>
+		<script src="../js/lqjs.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var allheight = document.body.scrollHeight;//屏幕高度
+				// 搜索空
+				var searchdivheight= allheight-34-50;
+					$(".search-nulldiv").css("height",searchdivheight+"px")
+
+			}
+		</script>
+	</head>
+	<body class="">
+		<!-- 搜索为空 -->
+		<div class="search-null">
+			<a class="search-keyworlda" href="#">中国文明</a>
+			<a class="search-keyworlda" href="#">世界文明</a>
+		</div>
+		<div class="search-nulldiv">
+			<img src="../image/icolq06.png" />
+			<span>抱歉没有找到相关内容</span>
+		</div>
+		<!-- 搜索为空end -->
+
+		
+		
+	
+
+		<div id="footernav">
+			<a class="jinc onthis" href="index.html">
+				<img src="../image/navbottom1-1.png" width="22" height="22"/>
+				<span class="red">首页</span>
+			</a>
+			<a class="jinc" href="dingdanyichuli.html">
+				<img src="../image/navbottom2.png" width="22" height="22"/>
+				<span>订阅</span>
+			</a>
+			<a class="jinc" href="store.html">
+				<img src="../image/navbottom3.png" width="22" height="22"/>
+				<span>发现</span>
+			</a>
+			<a class="jinc" href="setthis.html">
+				<img src="../image/navbottom4.png" width="22" height="22"/>
+				<span>我的</span>
+			</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 			
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Qiniu VOD player demo">
+		<meta name="format-detection" content="telephone=no">
+		<title>首页</title>
+		<link rel="stylesheet" href="css/lqbase.css" />
+		<link rel="stylesheet" href="css/lqpublic.css" />
+		<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/swiper-3.4.2.jquery.min.js"></script>
+	</head>
+	<body class="backgry">
+	<div class="main" id="wrapper">
+	<div id="scroller">	
+		<!-- 搜索框 -->
+		<!-- <div class="search">
+			<div class="search-img1"><a href="#"><img class="search-imga" src="../image/icosearch1.png" /></a></div>
+			<div class="search-input"><i class="search-ico"></i><input type="" name="" placeholder="西方文化史"></div>
+			<div class="search-img2"><a href="#"><img class="search-imga2" src="../image/icosearch2.png" /></a></div>
+		</div> -->
+		<!-- 搜索框end -->
+
+		<!--banner轮播图-->
+		<div class="bannerdiv">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="image/1.jpg"></div>
+			        <div class="swiper-slide"><img src="image/1.jpg"></div>
+			        <div class="swiper-slide"><img src="image/1.jpg"></div>
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>			    
+			</div>
+		</div>
+		<script type="text/javascript">
+  var mySwiper = new Swiper ('.swiper-container', {
+  	initialSlide:0,//默认从第一张图开始
+  	autoplay: 5000,//可选选项，自动滑动
+  	speed:300,
+  	autoplayDisableOnInteraction:false,
+    direction: 'horizontal',//滑动方向水平    
+    loop: true,        
+    pagination: '.swiper-pagination',   // // 如果需要分页器
+  }) 
+
+</script>
+		<!--banner轮播图end-->	
+		
+		<!-- 热门，分类 -->
+		<div class="nav-two">
+			<div class="nav-twodiv">
+				<div class="nav-hot"><a href=""><img src="image/icolq15.png"><span>热门 </span></a></div>
+				<div class="nav-classify"><a href="#"><img src="image/icolq16.png"><span>搜索 </span></a></div>
+				<div class="nav-classify"><a href="#"><img src="image/icolq18.png"><span>观看记录 </span></a></div>
+			</div>
+		</div>
+		<!-- 热门，分类end -->
+		
+		<!-- 最新 -->
+		<div class="listnew">
+			<div class="listnew-title"><span class="border-leftred">最新</span><a class="listmore" href="阅读部分-搜索/searchend.html">查看全部<i class="rightj"></i></a></div>
+			<div class="listcenter">
+			<!-- 循环 -->
+				<div class="listli">
+					<a href="阅读视频-视频/lookone.html">
+					<div class="list-img">
+						<!-- 标签听或看 -->
+						<i class="listico">听</i>
+						<img class="listimg" src="image/icolq17.png">
+					</div>
+					<div class="list-titlediv">
+						<span class="list-title">鲍鹏山教授</span><strong class="list-bnum">播放:2330</strong>
+					</div>
+					</a>
+				</div>
+				<div class="listli">
+					<a href="阅读视频-视频/lookone.html">
+					<div class="list-img">
+						<!-- 标签听或看 -->
+						<i class="listico">听</i>
+						<img class="listimg" src="image/icolq17.png">
+					</div>
+					<div class="list-titlediv">
+						<span class="list-title">鲍鹏山教授</span><strong class="list-bnum">播放:2330</strong>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- 最新 -->
+
+		<!-- 热门 -->
+		<div class="listnew">
+			<div class="listnew-title"><span class="border-leftred">热门</span><a class="listmore">查看全部<i class="rightj"></i></a></div>
+			<div class="listcenter">
+			<!-- 循环 -->
+				<div class="listli">
+					<a href="阅读视频-视频/lookone.html">
+					<div class="list-img">
+						<!-- 标签听或看 -->
+						<i class="listico">听</i>
+						<img class="listimg" src="image/icolq17.png">
+					</div>
+					<div class="list-titlediv">
+						<span class="list-title">鲍鹏山教授</span><strong class="list-bnum">播放:2330</strong>
+					</div>
+					</a>
+				</div>
+				<div class="listli">
+					<a href="阅读视频-视频/lookone.html">
+					<div class="list-img">
+						<!-- 标签听或看 -->
+						<i class="listico">听</i>
+						<img class="listimg" src="image/icolq17.png">
+					</div>
+					<div class="list-titlediv">
+						<span class="list-title">鲍鹏山教授</span><strong class="list-bnum">播放:2330</strong>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- 热门end -->
+
+		<!-- 名家现场 -->
+		<div class="listnew">
+			<div class="listnew-title"><span class="border-leftred">名家现场</span><a class="listmore">查看全部<i class="rightj"></i></a></div>
+			<div class="listcenter">
+			<!-- 循环 -->
+				<div class="listli">
+					<a href="阅读视频-视频/lookone.html">
+					<div class="list-img">
+						<!-- 标签听或看 -->
+						<i class="listico">听</i>
+						<img class="listimg" src="image/icolq17.png">
+					</div>
+					<div class="list-titlediv">
+						<span class="list-title">鲍鹏山教授</span><strong class="list-bnum">播放:2330</strong>
+					</div>
+					</a>
+				</div>
+				<div class="listli">
+					<a href="阅读视频-视频/lookone.html">
+					<div class="list-img">
+						<!-- 标签听或看 -->
+						<i class="listico">听</i>
+						<img class="listimg" src="image/icolq17.png">
+					</div>
+					<div class="list-titlediv">
+						<span class="list-title">鲍鹏山教授</span><strong class="list-bnum">播放:2330</strong>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- 名家现场end -->
+
+		<!-- 听书 -->
+		<div class="listnew">
+			<div class="listnew-title"><span class="border-leftred">听书</span><a class="listmore">查看全部<i class="rightj"></i></a></div>
+			<div class="listcenter">
+			<!-- 循环 -->
+				<div class="listli">
+					<a href="阅读视频-视频/lookone.html">
+					<div class="list-img">
+						<!-- 标签听或看 -->
+						<i class="listico">听</i>
+						<img class="listimg" src="image/icolq17.png">
+					</div>
+					<div class="list-titlediv">
+						<span class="list-title">鲍鹏山教授</span><strong class="list-bnum">播放:2330</strong>
+					</div>
+					</a>
+				</div>
+				<div class="listli">
+					<a href="阅读视频-视频/lookone.html">
+					<div class="list-img">
+						<!-- 标签听或看 -->
+						<i class="listico">听</i>
+						<img class="listimg" src="image/icolq17.png">
+					</div>
+					<div class="list-titlediv">
+						<span class="list-title">鲍鹏山教授</span><strong class="list-bnum">播放:2330</strong>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- 听书end -->
+	</div></div>
+
+		<div id="footernav">
+			<a class="jinc onthis" href="index.html">
+				<img src="image/navbottom1-1.png" width="22" height="22"/>
+				<span class="red">首页</span>
+			</a>
+			<a class="jinc" href="dingdanyichuli.html">
+				<img src="image/navbottom2.png" width="22" height="22"/>
+				<span>订阅</span>
+			</a>
+			<a class="jinc" href="store.html">
+				<img src="image/navbottom3.png" width="22" height="22"/>
+				<span>发现</span>
+			</a>
+			<a class="jinc" href="setthis.html">
+				<img src="image/navbottom4.png" width="22" height="22"/>
+				<span>我的</span>
+			</a>
+		</div>
+
+	</body>
+</html>

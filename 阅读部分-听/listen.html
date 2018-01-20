@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 			
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Qiniu VOD player demo">
+		<title>友朋会</title>
+		<link rel="stylesheet" href="../css/lqbase.css" />
+		<link rel="stylesheet" href="../css/lqpublic.css" />
+		<link href="https://player.qiniucc.com/sdk/latest/qiniuplayer.min.css" rel="stylesheet">
+		<script src="https://player.qiniucc.com/sdk/latest/qiniuplayer.min.js"></script>
+		<script src="../js/jquery-1.11.0.min.js"></script>
+		<!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+			window.onload=function(){				
+				var allheight = document.body.scrollHeight+"px";//屏幕高度
+				$(".pdivzan").click(function(){
+					$(this).addClass('pdivzaned');
+				});
+				$(".look-share").click(function(){
+					$(".zhezhaoc").css("display","flex");
+					$(".zhezhao").css("display","flex");
+					$(".zhezhaoc").css("height",allheight);
+				});
+				$(".zhezhao").click(function(){
+					$(".zhezhaoc").css("display","none");
+					$(".zhezhao").css("display","none");
+					});
+				var onoff=false;//订阅开关 false没订阅，true订阅了
+				$(".look-pic02").click(function(){
+					if(onoff){//没订阅，点击订阅
+						$(this).removeClass('dinged');
+						$("#dingyue").html("加入订阅");
+						onoff = false;						
+					}else{		//取消了，加入订阅
+						$(this).addClass('dinged');
+						$("#dingyue").html("取消订阅");
+						onoff = true;
+					}
+					
+
+				})
+				
+
+				}
+			
+		</script>
+	</head>
+	<body class="paddbottom backgry">
+		<!-- 分享遮罩层 -->
+		<div class="zhezhaoc"></div>
+		<div class="zhezhao">
+			<img src="../image/icotop.png">
+			<p>分享给好友</p>
+		</div>
+		<!-- 分享遮罩层end -->
+		<!--播放div-->
+		<div class="bannerdiv">
+			<img class="look-titlepic" src="../image/icolq11.png">
+		</div>
+		<!--播放divend-->
+		
+		<!-- 价格，加入订阅，分享试看 -->
+		<div class="lookdiv01">
+			<div class="look-pic">
+				<div class="look-pic01">
+				<!-- redplay是视频播放样式，redlis是音频播放样式, 文字专辑没有样式 -->
+					<span><i>￥</i>100.00 <b class="redplay redlis"></b></span>
+
+					<p>共10集，每集只需10元</p>
+				</div>
+				<div class="look-share columns">
+					分享给好友
+				</div>
+				<div class="look-pic02">
+					<i></i>
+					<span id="dingyue">加入订阅</span>
+				</div>
+				
+			</div>
+			<div class="look-div02">
+				<div class="look-pic03">
+					<i></i>
+					<span>11133333333345</span>
+				</div>				
+				<a class="redsubmitbtn">立即购买</a>
+			</div>
+
+		</div>
+		<!-- 价格，加入订阅，分享试看end -->
+		
+		<div class="look-tips listen">
+				<div class="look-pltitle">简介</div>
+				<div class="look-tips read">
+				<h2 class="read-title">第一章简介</h2>
+				<img class="Limg" src="../image/icolq17.png" />
+				<p class="read-p">听力课堂是国内很受欢迎的开放式英语学习网站,提供海量英语听力mp3下载(在线学习和免费下载),以及各种免费学英语资料,让您迅速提升英语水平,攻克英语学习难关!听力课堂是国内很受欢迎的开放式英语学习网站,提供海量英语听力mp3下载(在线学习和免费下载),以及各种免费学英语资料,让您迅速提升英语水平,攻克英语学习难关!听力课堂是国内很受欢迎的开放式英语学习网站,提供海量英语听力mp3下载(在线学习和免费下载),以及各种免费学英语资料,让您迅速提升英语水平,攻克英语学习难关!</p>
+				<img class="Limg" src="../image/icolq17.png" />
+				<p class="read-p">听力课堂是国内很受欢迎的开放式英语学习网站,提供海量英语听力mp3下载(在线学习和免费下载),以及各种免费学英语资料,让您迅速提升英语水平,攻克英语学习难关!听力课堂是国内很受欢迎的开放式</p>
+				<p class="read-p">听力课堂是国内很受欢迎的开放式英语学习网站,提供海量英语听力mp3下载(在线学习和免费下载),以及各种免费学英语资料,让您迅速提升英语水平,攻克英语学习难关!听力课堂是国内很受欢迎的开放式</p>
+			</div>
+		</div>
+		
+		<!-- 列表 -->
+		<div class="look-list">
+			<div class="look-lists listenlist">
+				<a class="look-center">
+					<span>《西方文化》————序·沉睡的欧罗巴</span>
+				</a>
+				<a class="look-center">
+					<span>《西方文化》————序·沉睡的欧罗巴</span>
+				</a>
+				<a class="look-center">
+					<span>《西方文化》————序·沉睡的欧罗巴</span>
+				</a>
+				
+			</div>
+			
+		</div>
+		
+		<!-- 列表end -->
+
+		<!-- 相关书籍 -->
+		<div class="aboutlist">
+			<h4 class="aboutlist-title">相关书籍推荐</h4>
+			<ul class="aboutlist-center">
+				<li><a href="#"><img src="" /><span>《鲍鹏山先秦诸子》</span></a></li>
+				<li><a href="#"><img src="" /><span>《鲍鹏山先秦诸子》</span></a></li>
+				<li><a href="#"><img src="" /><span>《鲍鹏山先秦诸子》</span></a></li>
+			</ul>
+		</div>
+		<!-- 相关书籍end -->
+
+
+		<!-- 底部 -->
+		<div id="footernav">
+			<a class="jinc onthis" href="index.html">
+				<img src="../image/navbottom1-1.png" width="22" height="22"/>
+				<span class="red">首页</span>
+			</a>
+			<a class="jinc" href="dingdanyichuli.html">
+				<img src="../image/navbottom2.png" width="22" height="22"/>
+				<span>订阅</span>
+			</a>
+			<a class="jinc" href="store.html">
+				<img src="../image/navbottom3.png" width="22" height="22"/>
+				<span>发现</span>
+			</a>
+			<a class="jinc" href="setthis.html">
+				<img src="../image/navbottom4.png" width="22" height="22"/>
+				<span>我的</span>
+			</a>
+		</div>
+	</body>
+</html>

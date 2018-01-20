@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 			
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Qiniu VOD player demo">
+		<title>友朋会</title>
+		<link rel="stylesheet" href="../css/lqbase.css" />
+		<link rel="stylesheet" href="../css/lqpublic.css" />
+		<link rel="stylesheet" href="../css/message.css" />
+		
+		<link href="https://player.qiniucc.com/sdk/latest/qiniuplayer.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/sixBitPasswordInputBox.css" />
+		<script src="https://player.qiniucc.com/sdk/latest/qiniuplayer.min.js"></script>
+		<script src="../js/jquery-1.11.0.min.js"></script>
+		<script src="../js/message.js"></script>
+
+		<!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+
+
+	</head>
+	<body class="paddbottom grybg" onload="loaded()">
+	<!-- 分享遮罩层 -->
+		<div class="zhezhaoc" ></div>
+		<div class="zhezhao">
+			<img src="../image/icotop.png">
+			<p>分享给好友</p>
+		</div>
+		<!-- 分享遮罩层end -->
+		<div id="div">已赞</div>
+		<div id="div2">取消赞</div>
+	<div class="main" id="wrapper">
+	<div id="scroller">		
+		
+		<!--播放div-->
+		<div class="bannerdiv">
+			 <video id="demo-video" class="video-js vjs-big-play-centered"></video>
+
+        <script src="http://player.qiniucc.com/sdk/latest/qiniuplayer.min.js?v=0.3.3"></script>
+        <script>
+            var url = 'http://og9dz2jqu.cvoda.com/Zmlyc3R2b2RiOldlYiBEZXZlbG9wbWVudCBJbiAyMDE3IC0gQSBQcmFjdGljYWwgR3VpZGUtOWhES2ZCS3VYakkubWt2_q00000001.m3u8';
+            new QiniuPlayer('demo-video', {
+                engineOrder : ['html5', 'flash'],
+                autoplay    : false,
+                preload     : 'auto',
+                controls    : true,
+                poster      : 'https://player.qiniucc.com/qiniu-620x205.png',
+                url        : url,
+                type        : "hls",
+              	width	: "100%",
+              	height	:178
+            });
+        </script>
+		</div>
+		<!--播放divend-->
+		
+		<!-- 价格，加入订阅，分享试看 -->
+		<div class="lookdiv01">
+		<div class="look-pic">
+				<div class="look-pic01 allwidth">
+					<h6 class="look-title01">赵林教授带你走进古典西方文化</h6>
+					<h4 class="look-title02">第一集</h4>
+				</div>				
+			</div>
+		<!-- 	<div class="look-pic">
+				<div class="look-pic01">
+				redplay是视频播放样式，redlis是音频播放样式, 文字专辑没有样式
+					<span><i>￥</i>100.00 <b class="redplay"></b></span>
+
+					<p>共10集，每集只需10元</p>
+				</div>
+				<div class="look-pic03">
+					<i></i>
+					<span>11133333333345</span>
+				</div>
+				<div class="look-pic02">
+					<i></i>
+					<span id="dingyue">加入订阅</span>
+				</div>
+				
+			</div> -->
+			<div class="look-div02">
+				<div class="look-share">
+					分享给好友
+				</div>
+				<div class="look-pic03">
+					<i></i>
+					<span>11133333333345</span>
+				</div>
+			</div>
+			
+		</div>
+		<div class="look-tips">
+				<!-- <label></label> -->
+				<span>名家现场，国庆长假，随赵林教授行走神圣罗马帝国之路（奥地利，意大利）</span>
+			</div>
+		<!-- 价格，加入订阅，分享试看end -->
+
+		<!-- 列表 -->
+		<div class="look-list" >
+			
+			<div class="look-pltitle" id="look-pltitle">评论</div>
+
+							<!-- pinjdiv用来查找div追加元素 -->
+						<div class="videode03 allwidth pinjdiv">
+						<!-- 没有评论 -->
+						<div class="nopinl">
+							<img src="../image/iconop.png">
+							<span>暂无评论，快来抢沙发</span>
+						</div>
+						<!-- 没有评论 -->
+					<!-- 交流循环 -->
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em class="zannum">0</em><i></i></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<!-- end -->
+
+
+						
+
+						<div class="wrap looksee" style="display: none;">
+							<div class="inputBoxContainer" id="inputBoxContainer">
+								<input type="text" class="realInput"/>
+								<div class="bogusInput">
+									<input type="text" maxlength="6" disabled/>
+									<input type="text" maxlength="6" disabled/>
+									<input type="text" maxlength="6" disabled/>
+									<input type="text" maxlength="6" disabled/>
+									<input type="text" maxlength="6" disabled/>
+									<input type="text" maxlength="6" disabled/>
+								</div>
+							</div>
+							<button id="confirmButton" class="confirmButton">输入观看码</button>
+							<p class="showValue" id="showValue" style="display: none;"></p>
+						</div>
+						<script type="text/javascript" src="../js/six_bit_password_input_box.js" ></script>
+						<script>
+							boxInput.init(function(){
+								getValue();
+							});
+							document.getElementById("confirmButton").onclick = function(){
+								getValue();
+							}
+							function getValue(){
+								document.getElementById("showValue").innerText = boxInput.getBoxInputValue();
+							}
+							
+						</script>
+					</div>
+					
+		</div>
+			</div>
+				</div>
+			<!-- 列表end -->
+	
+	
+			<!-- 我也说两句 -->
+		<div class="pinjiadiv" id="pinjiadiv">
+			<input onkeyup="this.value=(this.value.match(/\d+(\.\d{0,2})?/)||[''])[0]" type="text" name="mysay" placeholder="我也说两句"> <a class="pinjsubmit">发送</a>
+		</div>
+	
+		<!-- 底部 -->
+		<!-- <div id="footernav">
+			<a class="jinc onthis" href="index.html">
+				<img src="../image/navbottom1-1.png" width="22" height="22"/>
+				<span class="red">首页</span>
+			</a>
+			<a class="jinc" href="dingdanyichuli.html">
+				<img src="../image/navbottom2.png" width="22" height="22"/>
+				<span>订阅</span>
+			</a>
+			<a class="jinc" href="store.html">
+				<img src="../image/navbottom3.png" width="22" height="22"/>
+				<span>发现</span>
+			</a>
+			<a class="jinc" href="setthis.html">
+				<img src="../image/navbottom4.png" width="22" height="22"/>
+				<span>我的</span>
+			</a>
+		</div> -->
+			<script src="../js/lqjs.js"></script>
+			       <script type="text/javascript" src="../js/iscroll.js"></script>
+       <!-- <script type="text/javascript" src="../js/demoUtils.js"></script> -->
+<script type="text/javascript">
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true });
+
+	document.getElementById('me').addEventListener('tap', function () {
+		this.style.background = !this.style.background ? '#a00' : '';
+	}, false);
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
+	capture: false,
+	passive: false
+} : false);
+
+function isPassive() {
+    var supportsPassiveOption = false;
+    try {
+        addEventListener("test", null, Object.defineProperty({}, 'passive', {
+            get: function () {
+                supportsPassiveOption = true;
+            }
+        }));
+    } catch(e) {}
+    return supportsPassiveOption;
+}
+
+</script>
+	</body>
+</html>

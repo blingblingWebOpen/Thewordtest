@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 			
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Qiniu VOD player demo">
+		<title>友朋会</title>
+		<link rel="stylesheet" href="../css/lqbase.css" />
+		<link rel="stylesheet" href="../css/lqpublic.css" />
+		<link href="https://player.qiniucc.com/sdk/latest/qiniuplayer.min.css" rel="stylesheet">
+		<script src="https://player.qiniucc.com/sdk/latest/qiniuplayer.min.js"></script>
+		<script src="../js/jquery-1.11.0.min.js"></script>
+		<!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+        <!-- 音频样式及js -->
+        <link rel="stylesheet" href="../css/audioplayer.css" />
+		
+  		<script type="text/javascript">
+			window.onload=function(){				
+				var allheight = document.body.scrollHeight+"px";//屏幕高度
+				$(".pdivzan").click(function(){
+					$(this).addClass('pdivzaned');
+				});
+				$(".look-share").click(function(){
+					$(".zhezhaoc").css("display","flex");
+					$(".zhezhao").css("display","flex");
+					$(".zhezhaoc").css("height",allheight);
+				});
+				$(".zhezhao").click(function(){
+					$(".zhezhaoc").css("display","none");
+					$(".zhezhao").css("display","none");
+					});
+				var onoff=false;//订阅开关 false没订阅，true订阅了
+				$(".look-pic02").click(function(){
+					if(onoff){//没订阅，点击订阅
+						$(this).removeClass('dinged');
+						$("#dingyue").html("加入订阅");
+						onoff = false;						
+					}else{		//取消了，加入订阅
+						$(this).addClass('dinged');
+						$("#dingyue").html("取消订阅");
+						onoff = true;
+					}
+					
+
+				})
+				
+
+				}
+			
+		</script>
+	</head>
+	<body class="paddbottom grybg">
+		<div id="div">已赞</div>
+		<div id="div2">取消赞</div>
+		<!-- 分享遮罩层 -->
+		<div class="zhezhaoc" ></div>
+		<div class="zhezhao">
+			<img src="../image/icotop.png">
+			<p>分享给好友</p>
+		</div>
+		<!-- 分享遮罩层end -->
+		<!--播放音频div-->
+	
+		<!-- 修改过的 -->
+			<div class="audioall">
+			<img src="../image/1.jpg" />
+				<p class="weixinAudio">
+				<audio src="" id="media" width="1" height="1" preload></audio>
+				<span id="audio_area" class="db audio_area">
+					<span class="audio_wrp db">
+						<span class="audio_play_area">
+							<i class="icon_audiodefault"><img src="../image/shengyin.png" alt=""></i>
+							<i class="icon_audioplaying"><img src="../image/shengyin.gif" alt=""></i>
+	            		</span>
+						<span id="audio_length" class="audio_length tips_global"></span>
+						<span id="curent_time">0:00</span>
+						<span class="db audio_info_area">
+	                		<strong class="db audio_title">浮夸</strong>
+						</span>
+						<span id="int_c"></span>
+						<span class="progress_bar_box" style="width: 78%;">
+							<span id="audio_progress" class="progress_bar" style="width: 0%;"></span>
+						</span>
+					</span>
+				</span>
+
+				</p>
+				<script src="../js/audioplayer.js"></script>
+				<script type="text/javascript">
+				var durationtime='';//总时长
+					$.ajax({
+						type:'get',
+						async:false,
+						url : 'http://image.shiziqiu.com/20171218163130/7ef92bacbac44d098bbd9caf31efd61e?avinfo',
+						 dataType : "json",//数据类型为jsonps
+                		data:{},
+                		success:function(res){
+                			var stream = res.data.streams;
+                			durationtime = parseInt(stream.duration);
+                			console.log(durationtime);
+                		}
+					});
+					$('.weixinAudio').weixinAudio({
+						autoplay:true,
+						src:'http://image.shiziqiu.com/20171218163130/7ef92bacbac44d098bbd9caf31efd61e?avinfo=durationtime',
+					});
+
+					
+				</script>
+				<script>
+					var a=0;
+					$(".audio_play_area").click(function () {
+							a++;
+						if(a%2!=0){
+							$(".icon_audiodefault").css({"display":"none"});
+							$(".icon_audioplaying").css({"display":"block"});
+							console.log(a);
+						}
+						if(a%2==0){
+							console.log(a);
+							$(".icon_audiodefault").css({"display":"block"});
+							$(".icon_audioplaying").css({"display":"none"});
+							}
+					})
+				</script>
+			</div>
+		<!-- 修改过的 -->
+		<!--播放音频divend-->
+		
+		<!-- 价格，加入订阅，分享试看 -->
+		<div class="lookdiv01">
+			
+			<div class="look-pic">
+				<div class="look-pic01 allwidth">
+					<h6 class="look-title01">赵林教授带你走进古典西方文化</h6>
+					<h4 class="look-title02">第一集</h4>
+				</div>				
+			</div>
+			<div class="look-div02">
+				<div class="look-pic03">
+					<i></i>
+					<span>11133333333345</span>
+				</div>
+				<div class="look-share">
+					分享给好友
+				</div>				
+			</div>			
+		</div>
+		<div class="look-tips">
+			<span>名家现场，国庆长假，随赵林教授行走神圣罗马帝国之路（奥地利，意大利）</span>
+		</div>
+		<!-- 价格，加入订阅，分享试看end -->
+
+		<!-- 列表 -->
+		<div class="look-list">
+			<div class="look-pltitle">评论</div>
+
+						<div class="videode03 allwidth">
+					<!-- 交流循环 -->
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em class="zannum">0</em><i></i></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="videoplist">
+							<div class="userpic"><img  src="image/icopic01.png"/></div>
+							<div class="pdiv">
+								<p class="pdivname">恨水长东</p>
+								<p class="pdivcenter">还是老师讲的偏僻如理</p>
+								<div class="pdivcaoz">
+									<span class="pdivtime">1小时</span>
+									<div class="pdivzan"><em>203</em><i></i></div>
+								</div>
+							</div>
+						</div>
+						<!-- end -->
+						<!-- 我也说两句 -->
+						<div class="pinjiadiv looksee" id="pinjiadiv">
+							<input  type="text" name="mysay" placeholder="我也说两句"> <a class="pinjsubmit">发送</a>
+						</div>
+					</div>
+		</div>
+		
+		<!-- 列表end -->
+		
+		<!-- 底部 -->
+		<div id="footernav">
+			<a class="jinc onthis" href="index.html">
+				<img src="../image/navbottom1-1.png" width="22" height="22"/>
+				<span class="red">首页</span>
+			</a>
+			<a class="jinc" href="dingdanyichuli.html">
+				<img src="../image/navbottom2.png" width="22" height="22"/>
+				<span>订阅</span>
+			</a>
+			<a class="jinc" href="store.html">
+				<img src="../image/navbottom3.png" width="22" height="22"/>
+				<span>发现</span>
+			</a>
+			<a class="jinc" href="setthis.html">
+				<img src="../image/navbottom4.png" width="22" height="22"/>
+				<span>我的</span>
+			</a>
+		</div>
+		<script src="../js/lqjs.js"></script>
+	</body>
+</html>
