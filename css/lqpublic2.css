@@ -1872,7 +1872,7 @@ input.userinput::-webkit-input-placeholder{
     position: absolute;
     top: 0px;
     left: 50%;
-    margin-left:-0.39rem;
+    margin-left:-0.63rem;
     width: 1.26rem; 
     height: 1.26rem;
 }
