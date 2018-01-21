@@ -1947,17 +1947,22 @@ input.userinput::-webkit-input-placeholder{
     align-items: center;
     width: 100%;
     height: auto;
-    margin-top: 6.333333333333333rem;
+    margin-top: 6.166666666666667rem;
     padding-bottom: 3rem;
 }
 .goimg01 img{
-    width:18.666666666666668rem;
-    height:8.166666666666666rem;
+    width:19.416666666666668rem;
+    height:8.416666666666666rem;
 }
 
-.gotext {    
+.gotext {  
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  
+    width: 100%;
     margin: 0 auto;    
-    height: 18rem;    
+    height: 15rem;    
     writing-mode: vertical-rl;/*从左向右 从右向左是 writing-mode: vertical-rl;*/    
     writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/    
     text-align: center;
@@ -1966,6 +1971,10 @@ input.userinput::-webkit-input-placeholder{
     font-size: 0.8333333333333334rem;
     font-family: simsun;
 } 
+.gotext img{
+    width:7.166666666666667rem; 
+    height:14.75rem;
+}
 .gotext p{    
     display:table;
     margin: 0 auto;    
@@ -1974,7 +1983,7 @@ input.userinput::-webkit-input-placeholder{
     writing-mode: tb-rl;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/    
     text-align: center;
     vertical-align:right;
-    line-height: 2em;
+    line-height: 2.5em;
     color: #828282;
     font-size: 0.8333333333333334rem;
     font-family: simsun;
@@ -1986,11 +1995,12 @@ input.userinput::-webkit-input-placeholder{
     align-items: center;
     width: 100%;
     height: auto;
-    padding: 2rem 0px;
+    padding-top: 2.0833333333333335rem;
+    padding-bottom: 3rem;
 }
 .gonum img{
-    width: 3.5rem; 
-    height: 3.5rem;
+    width: 3.3333333333333335rem;; 
+    height: 3.3333333333333335rem;;
 }
 .gonum02{
     display: block;    
