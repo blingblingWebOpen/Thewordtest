@@ -1,6 +1,6 @@
  /*公共样式，主文字80%的58595b*/
   *{padding:0;margin:0}
-body,div,p,span,strong,section,h1,h2,h3,h4,h5,h6,hr,a,i,b,em,input,canvas,ul,li,dl,dd,dt,img,iframe,label,table,th,tr,td,select,sup,sub,pre,video,source,textarea{padding:0px; margin: 0px; font-size: 1rem; font-weight: normal; font-family:"PingFangSC-Regular", "microsoft yahei", "sans-serif"; color: rgba(88,89,91,0.8); list-style: none; font-style: normal; line-height: 1em; border: 0px;}
+body,div,p,span,strong,section,h1,h2,h3,h4,h5,h6,hr,a,i,b,em,input,canvas,ul,li,dl,dd,dt,img,iframe,label,table,th,tr,td,select,sup,sub,pre,video,source,textarea{padding:0px; margin: 0px; font-size: 12px; font-weight: normal; font-family:"PingFangSC-Regular", "microsoft yahei", "sans-serif"; color: rgba(88,89,91,0.8); list-style: none; font-style: normal; line-height: 1em; border: 0px;}
 input,button,select,textarea{-webkit-appearance:none;outline:none}textarea{resize:none}
 
 a,button{text-decoration: none; cursor: pointer; border: none;}
@@ -197,17 +197,17 @@ audio::-webkit-media-controls-enclosure {width: calc(100% + 2.6666666666666665re
 
 }
 .zhezhao img{
-	width: 3rem;
-	height: 3rem;
-	margin-right: 1.8333333333333333rem;
-	margin-top: 0.6666666666666666rem;
-	margin-bottom: 1.4166666666666667rem;
+	width: .74rem;
+	height: .74rem;
+	margin-right: .48rem;
+	margin-top: .18rem;
+	margin-bottom: .36rem;
 }
 .zhezhao p{	
-	font-size: 1.3333333333333333rem;
+	font-size: .3rem;
 	color: #fff;
 	opacity: 0.8;
-	margin-right: 1.8333333333333333rem;
+	margin-right: .48rem;
 	
 
 }

@@ -8,15 +8,16 @@
 		<meta name="format-detection" content="telephone=no">
 		<meta name="description" content="Qiniu VOD player demo">
 		<title>友朋会</title>
-		<link rel="stylesheet" href="../css/lqbase.css" />
-		<link rel="stylesheet" href="../css/lqpublic.css" />
-		<link rel="stylesheet" href="../css/message.css" />
+		<link rel="stylesheet" href="../css/lqbase2.css" />
+		<link rel="stylesheet" href="../css/lqpublic2.css" />
+		<link rel="stylesheet" href="../css/message2.css" />
 		
 		<link href="https://player.qiniucc.com/sdk/latest/qiniuplayer.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="../css/sixBitPasswordInputBox.css" />
 		<script src="https://player.qiniucc.com/sdk/latest/qiniuplayer.min.js"></script>
 		<script src="../js/jquery-1.11.0.min.js"></script>
 		<script src="../js/message.js"></script>
+		<script src="../js/common.js"></script>
 
 		<!--[if lt IE 9]>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -24,7 +25,7 @@
 
 
 	</head>
-	<body class="paddbottom grybg" onload="loaded()">
+	<body class="grybg" onload="loaded()">
 	<!-- 分享遮罩层 -->
 		<div class="zhezhaoc" ></div>
 		<div class="zhezhao">
@@ -247,7 +248,8 @@
 	
 			<!-- 我也说两句 -->
 		<div class="pinjiadiv" id="pinjiadiv">
-			<input onkeyup="this.value=(this.value.match(/\d+(\.\d{0,2})?/)||[''])[0]" type="text" name="mysay" placeholder="我也说两句"> <a class="pinjsubmit">发送</a>
+		<!-- onkeyup="this.value=(this.value.match(/\d+(\.\d{0,2})?/)||[''])[0]" -->
+			<input  type="text" name="mysay" placeholder="我也说两句"> <a class="pinjsubmit">发送</a>
 		</div>
 	
 		<!-- 底部 -->
@@ -273,33 +275,18 @@
 			       <script type="text/javascript" src="../js/iscroll.js"></script>
        <!-- <script type="text/javascript" src="../js/demoUtils.js"></script> -->
 <script type="text/javascript">
-var myScroll;
-
-function loaded () {
-	myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true });
-
-	document.getElementById('me').addEventListener('tap', function () {
-		this.style.background = !this.style.background ? '#a00' : '';
-	}, false);
-}
-
-document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
-	capture: false,
-	passive: false
-} : false);
-
-function isPassive() {
-    var supportsPassiveOption = false;
-    try {
-        addEventListener("test", null, Object.defineProperty({}, 'passive', {
-            get: function () {
-                supportsPassiveOption = true;
-            }
-        }));
-    } catch(e) {}
-    return supportsPassiveOption;
-}
-
+//解决第三方软键盘唤起时底部input输入框被遮挡问题
+    var bfscrolltop = document.body.scrollTop;//获取软键盘唤起前浏览器滚动部分的高度
+    $("input[name='mysay']").focus(function(){//在这里‘input.inputframe’是我的底部输入栏的输入框，当它获取焦点时触发事件
+        interval = setInterval(function(){//设置一个计时器，时间设置与软键盘弹出所需时间相近
+        document.body.scrollTop = document.body.scrollHeight;//获取焦点后将浏览器内所有内容高度赋给浏览器滚动部分高度
+        },100)        
+    	console.log('弹起');
+    }).blur(function(){//设定输入框失去焦点时的事件
+        clearInterval(interval);//清除计时器
+        document.body.scrollTop = bfscrolltop;//将软键盘唤起前的浏览器滚动部分高度重新赋给改变后的高度
+        console.log('还原');
+    });
 </script>
 	</body>
 </html>

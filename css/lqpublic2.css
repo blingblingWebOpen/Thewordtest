@@ -5,8 +5,8 @@ html {
 :root ,body{height:100%;}/* 定义页面内容为一屏展现 这2个标签都必须设置高度100%  */
 body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页面为弹性盒子模型 内容垂直布局  */
 #footernav{position: absolute;z-index: 2;bottom: 0;left: 0;}
-#pinjiadiv{position: absolute;z-index: 2;bottom: 0;left: 0; height:4.166666666666667rem;}
-.main{position: absolute;z-index: 1; top: 0px; bottom: 4.166666666666667rem; left: 0px;width:100%;-webkit-box-flex:1;box-flex:1;overflow-y: scroll; -webkit-overflow-scrolling: touch; }
+#pinjiadiv{position: absolute;z-index: 2;bottom: 0;left: 0; height:.96rem;}
+.main{position: absolute;z-index: 1; top: 0px; bottom: .96rem; left: 0px;width:100%;-webkit-box-flex:1;box-flex:1;overflow-y: scroll; -webkit-overflow-scrolling: touch; }
 #scroller {
     position: absolute;
     z-index: 1;
@@ -29,8 +29,8 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
     text-size-adjust: none;
 }
 /*弹窗，罗杰*/
-.tankuang{display: none; width: 8rem; height: 3rem; text-align: center; line-height: 3rem; position: fixed; left: 50%; margin-left: -4rem;
- top: 50%; margin-top: -1.5rem; background: #000;color: #fff; font-size: 1.4rem; z-index: 9999999; border-radius: 15px;}
+.tankuang{display: none; width: 1.92rem; height: .6rem; text-align: center; line-height: .6rem; position: fixed; left: 50%; margin-left: -.96rem;
+ top: 50%; margin-top: -.39rem; background: #000;color: #fff; font-size: .3rem; z-index: 9999999; border-radius: 10px;}
 
 /*播放列表页*/
 
@@ -41,7 +41,7 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
     justify-content: flex-start;
     align-items: center;
      width: 100%;
-     height: 14.833333333333334rem;
+     height: 4.4rem;
      overflow: hidden;
      position: relative;
 }
@@ -507,9 +507,9 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    min-height: 5.2rem;
+    min-height: 1.4rem;
     border-bottom: 1px solid #f3f4f4;
-    padding:1.4rem 0px 1rem 0px;
+    padding:.2rem 0px .2rem 0px;
 }
 .videoplist:last-child{
     border: 0px;
@@ -518,8 +518,8 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
     width: 14.79%;
 }
 .userpic img{
-    width: 3.4rem;
-    height: 3.4rem;
+    width: .68rem;
+    height: .68rem;
     border-radius: 50%;
 }
 .pdiv{
@@ -532,20 +532,20 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
 }
 .pdivname{
     width: 100%;
-    height: 1.4rem;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
+    height: .34rem;
+    font-size: .24rem;
+    line-height: 1.4em;
     color: rgba(147,149,152,0.5);
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow:hidden;
-    margin-bottom: 0.6rem;
+    margin-bottom: .14rem;
 }
 .pdivcenter{
     width: 100%;
-    line-height: 1.2rem;
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
+    line-height: 1.2em;
+    font-size: .24rem;
+    margin-bottom: .18rem;
 }
 .pdivcaoz{
     display: flex;
@@ -555,7 +555,7 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
     width: 100%
 }
 .pdivtime{
-    font-size: 0.6666666666666666rem;
+    font-size: .2rem;
     color: #808285
 }
 .pdivzan{
@@ -567,29 +567,30 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
 }
 .pdivzan em{
     display: flex;   
-    margin-right: 0.4rem; 
+    margin-right: 0.04rem; 
     color: #a7a9ac;
-    font-size: 0.8333333333333334rem;
+    font-size: 0.2rem;
 }
 .pdivzan i{
     display: flex;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: .32rem;
+    height: .3rem;
     background: url(../image/icozan.png) no-repeat;
-    background-size: 1.5rem 1.5rem;
+    background-size: .32rem .3rem;
 }
 
 .pdivzaned em{
     display: flex;   
-    margin-right: 0.4rem; 
+    margin-right: 0.04rem; 
     color: #c7898b;
+    font-size: 0.2rem;
 }
 .pdivzaned i{
     display: flex;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: .32rem;
+    height: .3rem;
     background: url(../image/icozaned.png) no-repeat;
-    background-size: 1.5rem 1.5rem;
+    background-size: .32rem .3rem;
 }
 .pinjiadiv{
     display: flex;
@@ -598,7 +599,7 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
     align-items: center;
     background: #fff;
     width: 95%;
-    height: 5.4rem;
+    height: .96rem;
     padding:0px 2.5%;
     border-top: 1px solid #e0e1e3; 
     
@@ -615,10 +616,11 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
 }
 .pinjiadiv input{
     width: 79.8%;
-    height: 1.8333333333333333rem;
+    height: .52rem;
+    line-height: .52rem;
     color: #a7a9ac;
-    text-indent: 0.4rem;
-    font-size: 1.3333333333rem;
+    text-indent: .08rem;
+    font-size: .3rem;
     border: 1px solid #dcddde;
     border-radius: 6px;
 }
@@ -629,10 +631,10 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
     justify-content: center;
     align-items: center;
     width: 14.2%;
-    height: 1.8333333333333333rem;
-    line-height: 2.8rem;
+    height: .52rem;
+    line-height: .52rem;
      color: #a7a9ac;    
-    font-size: 1.3333333333rem;
+    font-size: .3rem;
     border-radius: 6px;
     text-align: center;
      background:none;  
@@ -663,7 +665,7 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
     align-items: flex-start;
     width: 90%;
     /*min-height: 8.5rem; */
-    padding:1.6666666666666667rem 5% 1.9166666666666667rem 5%;
+    padding:.3rem 5% .3rem 5%;
     border-bottom: 1px solid #f3f4f4;
     margin: 0 auto; 
     background: #fff;
@@ -675,7 +677,7 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
     align-items: flex-start;
     width: 100%;
     height: auto;
-    margin-bottom: 1.6666666666666667rem;
+    margin-bottom: .2rem;
 }
 .look-pic01{
     display: flex;
@@ -745,8 +747,8 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
 }
 .look-pic03 i{
     display: inline-table;
-   width:1.8333333333333333rem; 
-   height:1.5833333333333333rem;
+   width:.44rem; 
+   height:.4rem;
     background: url(../image/icognum.png) center no-repeat;
     background-size:100% 100%;
 }
@@ -762,12 +764,12 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
 .look-pic03 span{
     width: 100%;
     text-align: left;
-    font-size: 1rem;
+    font-size: .2rem;
     color: #a7a9ac;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    text-indent: 0.5833333333333334rem;
+    text-indent: .16rem;
 }
 .dinged i{
      background: url(../image/icolqed01.png) no-repeat;
@@ -805,13 +807,13 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
 }
 .look-share{
     width: auto;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    font-size:1rem;
+    height: .58rem;
+    line-height: .58rem;
+    font-size:.2rem;
     color: #a7a9ac;
-    text-indent: 3.4rem;
+    text-indent: .8rem;
     background: url(../image/icolq02.png) left center;
-    background-size: 2.5rem 2.5rem;
+    background-size: .58rem .58rem;
     background-repeat:no-repeat;    
     text-align: left;    
 }
@@ -840,7 +842,7 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
     width: 90%;
     height: auto;
     margin: 0 auto;
-    padding:0 5% 1rem 5%;
+    padding:0 5% .1rem 5%;
     background: #fff;
     position: relative;
     margin-top: 3px
@@ -911,23 +913,23 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 1.3333333333333333rem;
-    font-size: 1.3333333333333333rem;
+    height: .3rem;
+    font-size: .3rem;
     border-left: 3px solid #a6292e;
-    text-indent: 0.8rem;
-    margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
+    text-indent: .13rem;
+    margin-top: .3rem;
+    margin-bottom: .2rem;
 }
 .look-title01,.look-title02{
     /*display: flex;*/
     width: 100%;
-    height: 1.3333333333333333rem;
-    font-size: 1.25rem;
-    line-height: 1.3333333333333333rem;
+    height: .3rem;
+    font-size: .3rem;
+    line-height: .3rem;
     overflow:hidden;
     text-overflow: ellipsis;
     white-space: nowrap;    
-    margin-bottom: 4px;
+    margin-bottom: .08rem;
 }
 .look-title02{margin-bottom: 0px;}
 .look-tips{
@@ -937,7 +939,7 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
     align-items: flex-start;
     width:90%;
     background: #fff;
-    padding: 1.5rem 5%;  
+    padding: .3rem 5%;  
     overflow:hidden;
     margin: 3px 0;
 
@@ -953,18 +955,18 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
 .look-tips span{
     width: 100%;
     /*height: 1.5rem;*/
-    line-height: 1.5rem;
-    font-size: 1.2rem;
-    margin-left: 0.4rem;
+    line-height: 1.5em;
+    font-size: .24rem;
+    /*margin-left: 0.48rem;*/
     /*text-indent: 2em;*/
 }
 .look-titlepic{
     width: 100%;
 }
-#div{display: none; width: 8rem; height: 3rem; text-align: center; line-height: 3rem; position: fixed; left: 50%; margin-left: -4rem;
- top: 50%; margin-top: -1.5rem; background: #000;color: #fff; font-size: 1.4rem; z-index: 9999999; border-radius: 15px;}
-#div2{display: none; width: 8rem; height: 3rem; text-align: center; line-height: 3rem; position: fixed; left: 50%; margin-left: -4rem;
- top: 50%; margin-top: -1.5rem; background: #000;color: #fff; font-size: 1.4rem; z-index: 9999999; border-radius: 15px;}
+#div{display: none; width: 1.92rem; height: .6rem; text-align: center; line-height: .6rem; position: fixed; left: 50%; margin-left: -.96rem;
+ top: 50%; margin-top: -.39rem; background: #000;color: #fff; font-size: .3rem; z-index: 9999999; border-radius: 10px;}
+#div2{display: none; width: 1.92rem; height: .6rem; text-align: center; line-height: .6rem; position: fixed; left: 50%; margin-left: -.96rem;
+ top: 50%; margin-top: -.39rem; background: #000;color: #fff; font-size: .3rem; z-index: 9999999; border-radius: 10px;}
 
 /*听*/
 .listen{
@@ -1088,9 +1090,9 @@ body{display:-webkit-box;display:box;-webkit-box-orient:vertical;}/* 定义页�
 .search-imga{width: 2.9rem; height: 2.8rem;}
 .search-imga2{width: 3.1rem; height: 2.8rem;}
 /*无评论*/
-.nopinl{display: flex; flex-flow: column; justify-content: center; align-items:center;width: 100%; height: 20.3rem;}
-.nopinl img{width: 6.6rem; height: 4.6rem;}
-.nopinl span{font-size: 1.2rem; color: #a7a9ac; margin-top:1.8rem;}
+.nopinl{display: flex; flex-flow: column; justify-content: center; align-items:center;width: 100%; height: 4rem;}
+.nopinl img{width: 1.32rem; height: .9rem;}
+.nopinl span{font-size: .24rem; color: #a7a9ac; margin-top:.46rem;}
 /*总完成稿*/
 .nav-two{display: flex; flex-flow: row; justify-content: center; align-items:center;width: 100%; height: 5.333333333333333rem; background: #fff; margin-bottom: 3px;}
 .nav-twodiv{display: flex; flex-flow: row; justify-content: space-around; align-items:center;width: 96%; height: 5.333333333333333rem; padding: 0 2%}
